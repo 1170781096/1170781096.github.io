@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Survey</title>
+  </head>
+
+  <body>
+      <h1>Welcome to this questionnaire</h1>
+      <form id="theForm" action="index.html">
+
+
+      <br>
+      <br>
+      <h2>What do you think of the user interface of this <a href="https://www.amazon.ca" target="_blank">Amazon</a> website?</h2>
+      <br>
+      <a href="https://www.amazon.ca" target="_blank">
+      <img src="images/screenshot.png" alt="https://www.amazon.ca" width="1280" height="720">
+      </a>
+      <br>
+      <br>
+      <div class="question">
+        <h3>Please provide your personal information</h3>
+        <p>First name: <input type="text" name="firstname"></p>
+	      <p>Last name: <input type="text" name="lastname"></p>
+        <p>Your age: <input type="text" name="age"></p>
+        <br>
+      </div>
+
+      <div class="question">
+        1. How often do you shop online?<br>
+        <input type="radio" id="often" name="frequency" value="often">often <br>
+        <input type="radio" id="sometimes" name="frequency" value="sometimes">sometimes <br>
+        <input type="radio" id="occasionally" name="frequency" value="occasionally">occasionally <br>
+        <input type="radio" id="never" name="frequency" value="never">never <br>
+        <br>
+
+
+        2. What device(s) do you usually use for online shopping?<br>
+        <input type="checkbox" id="cellphone" name="device" value="cellphone">cellphone <br>
+        <input type="checkbox" id="tablet" name="device" value="tablet">tablet <br>
+        <input type="checkbox" id="desktop or labtop" name="device" value="PC">PC <br>
+        <input type="checkbox" id="I never shop online before" name="device" value="I never shop online before">I never shop online before <br>
+        <br>
+
+        3. Do you think the UI of this website is easy to learn and use?<br>
+        <input type="radio" id="Yes" name="Usability" value="Yes">Yes <br>
+        <input type="radio" id="No" name="Usability" value="No">No <br>
+        <br>
+
+        4. Is everything working fine on the UI of this website?<br>
+        <input type="radio" id="Yes" name="Proper functionality" value="Yes">Yes <br>
+        <input type="radio" id="No" name="Proper functionality" value="No">No <br>
+        <br>
+
+        5. Do you think the layout of the content on the UI is reasonable?<br>
+        <input type="radio" id="Yes" name="Proper functionality" value="Yes">Yes <br>
+        <input type="radio" id="No" name="Proper functionality" value="No">No <br>
+        <br>
+
+        6. Do you think the UI of this website is efficient to use?<br>
+        <input type="radio" id="Yes" name="Proper functionality" value="Yes">Yes <br>
+        <input type="radio" id="No" name="Proper functionality" value="No">No <br>
+        <br>
+
+        7. From 1 to 10, what is your rating for the UI of this website? <br>
+        <select id="rating">
+    			<option value="1">1</option>
+    			<option value="2">2</option>
+    			<option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5"selected="selected">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+  		  </select>
+        <br>
+      </div>
+
+      <br>
+      Comments:<br>
+	     <textarea rows="7" cols="50"></textarea>
+      <br>
+      <br>
+      <br>
+
+    <button id="submitButton" type="button" class="block">
+ 		   SUBMIT
+ 	  </button>
+
+    <p id="signature">Site created by Xiaochuan Sun</p>
+
+
+
+
+
+
+
+      </form>
+  </body>
