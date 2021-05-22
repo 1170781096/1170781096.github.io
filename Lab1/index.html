@@ -7,28 +7,30 @@
   </head>
 
   <body>
-      <h1>Welcome to this questionnaire</h1>
+      <div id="heading">
+        <h1>Welcome to this questionnaire</h1>
+      </div>
       <form id="theForm" action="index.html">
-
-
       <br>
       <br>
       <h2>What do you think of the user interface of this <a href="https://www.amazon.ca" target="_blank">Amazon</a> website?</h2>
       <br>
+
       <a href="https://www.amazon.ca" target="_blank">
-      <img src="images/screenshot.png" alt="https://www.amazon.ca" width="1280" height="720">
+        <img src="images/screenshot.png" alt="https://www.amazon.ca" width="1280" height="720">
       </a>
       <br>
       <br>
+
       <div class="question">
         <h3>Please provide your personal information</h3>
         <p>First name: <input type="text" name="firstname"></p>
 	      <p>Last name: <input type="text" name="lastname"></p>
         <p>Your age: <input type="text" name="age"></p>
-        <br>
-      </div>
+      <hr>
 
-      <div class="question">
+
+
         1. How often do you shop online?<br>
         <input type="radio" id="often" name="frequency" value="often">often <br>
         <input type="radio" id="sometimes" name="frequency" value="sometimes">sometimes <br>
@@ -40,7 +42,7 @@
         2. What device(s) do you usually use for online shopping?<br>
         <input type="checkbox" id="cellphone" name="device" value="cellphone">cellphone <br>
         <input type="checkbox" id="tablet" name="device" value="tablet">tablet <br>
-        <input type="checkbox" id="desktop or labtop" name="device" value="PC">PC <br>
+        <input type="checkbox" id="desktop or labtop" name="device" value="desktop or labtop">desktop or labtop <br>
         <input type="checkbox" id="I never shop online before" name="device" value="I never shop online before">I never shop online before <br>
         <br>
 
@@ -64,7 +66,7 @@
         <input type="radio" id="No" name="Proper functionality" value="No">No <br>
         <br>
 
-        7. From 1 to 10, what is your rating for the UI of this website? <br>
+        7. From 1(lowest) to 10(highest), what is your rating for the UI of this website? <br>
         <select id="rating">
     			<option value="1">1</option>
     			<option value="2">2</option>
@@ -80,23 +82,21 @@
         <br>
       </div>
 
+      <div id="comment">
+        Comments:<br>
+	       <textarea rows="7" cols="50"></textarea>
+      </div>
       <br>
-      Comments:<br>
-	     <textarea rows="7" cols="50"></textarea>
-      <br>
-      <br>
       <br>
 
-    <button id="submitButton" type="button" class="block">
- 		   SUBMIT
- 	  </button>
+      <button class="button">
+ 		     SUBMIT
+ 	    </button>
 
-    <p id="signature">Site created by Xiaochuan Sun</p>
+      <br>
+      <br>
 
-
-
-
-
+    <p id="signature">Site created by Lbw</p>
 
 
       </form>

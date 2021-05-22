@@ -1,0 +1,53 @@
+html{
+  background-color: white;
+}
+
+body{
+    font: 120% Lucida Sans, Verdana;
+    margin: 20px;
+    line-height: 26px;
+
+}
+
+#heading{
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px;
+}
+
+img {
+ display: block;
+ margin: 0 auto;
+ align: center;
+}
+
+.question {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+#comment{
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.button{
+  display: inline-block;
+  position: absolute;
+  left: 48%;
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#signature{
+  font-style: italic;
+}
