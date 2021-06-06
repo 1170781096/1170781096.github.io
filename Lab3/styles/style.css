@@ -1,0 +1,134 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+
+body{
+    font: 110% Lucida Sans, Verdana;
+    margin: 20px;
+    line-height: 26px;
+    background-image: url("background3.jpg"); 
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  font: 100% Lucida Sans, Verdana;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontent button{
+  display: inline-block;
+  background-color: #04AA6D;
+  font-size: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px 15px;
+  border-radius: 5px;
+}
+
+.button{
+  display: inline-block;
+  background-color: #04AA6D;
+  font-size: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px 15px;
+  border-radius: 5px;
+}
+
+
+
+
+
+.sidebar {
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #04AA6D;
+  width: 0;
+  position: fixed;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 9px 9px 9px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #b3b3b3;
+}
+
+.sidebar .closeButton {
+  position: absolute;
+  top: 0;
+  right: 26px;
+  font-size: 34px;
+  margin-left: 50px;
+}
+
+.openButton {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openButton:hover {
+  background-color: #444;
+}
+
+#mainButton {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+
+
+
+
+
+
+#signature{
+  font-style: italic;
+}
