@@ -9,7 +9,7 @@ function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
     // This filter asks for something like (12345), so parentheses with any number (at least 1)
     // of digits
-    var filter = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+    var filter = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/;
     if (filter.test(a)) {
         return true;
     }
@@ -22,7 +22,7 @@ function validateCreditCard(txtCreditCard) {
     var a = document.getElementById(txtCreditCard).value;
 
 
-    var filter = /(?:\d{4})(\s)\d{4}(\s)\d{4}(\s)\d{4}/;
+    var filter = /(?:\d{4})(\s)\d{4}(\s)\d{4}(\s)\d{4}$/;
     if (filter.test(a)) {
         return true;
     }
@@ -78,7 +78,7 @@ function confirmFeedback(){
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
-    var notComplete = 1;
+
     // phone validation, it calls validatePhone
     // and also some feedback as an Alert + putting a value in the input that shows the format required
     // the "addClass" will use the class "error" defined in style.css and add it to the phone input
@@ -86,7 +86,7 @@ $(document).ready(function(){
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
             alert("Wrong format for phone number, the format should be (xxx)-xxx-xxxx or xxx-xxx-xxxx");
-            $("#phone").val("(xxx)-xxx-xxxx");
+            $("#phone").val("");
             $("#phone").addClass("error");
         }
         else {
@@ -97,7 +97,7 @@ $(document).ready(function(){
     $("#debit").on("change", function(){
         if (!validateCreditCard("debit")){
             alert("Wrong format for credit card number, the format should be xxxx xxxx xxxx xxxx");
-            $("#debit").val("xxxx xxxx xxxx xxxx");
+            $("#debit").val("");
             $("#debit").addClass("error");
         }
         else {
@@ -170,15 +170,21 @@ $(document).ready(function(){
     });
 
   $('#submitButton').click(function(event){
-
-    $('.form-control').each(function(){
+    var notComplete = 0;
+    $('#nameInput, #phone, #debit, #dateInput').each(function(){
       if(!$(this).val()){
         notComplete = 1;
-      } else {notComplete = 0}
+      }
     });
+    $('#timeInput, #serviceInput').each(function(){
+      if($(this).val() == "blank"){
+        notComplete = 1;
+      }
+    });
+
     if(notComplete == 1){
-      alert("Please fill in all fields")
-    } else {alert("You have successfully made an appointment with the expert and time you selected, thank you!")}
+      alert("Please fill in all fields, select service and time")
+    } else {alert("You have successfully made an appointment with the expert, date and time you selected, thank you!")}
 });
 
 //  $('#exampleModal').on('show.bs.modal', function (e) {

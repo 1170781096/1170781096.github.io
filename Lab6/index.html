@@ -135,8 +135,8 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     </table>
 <form id = myForm>
   <h2 style="font-family:fantasy; color:#04AA6D" id = "Booking"><img src="images/icons8-reserve-48.png" alt="logo" style="width:40px;"> Start booking now</h2>
-  <select class="form-select" aria-label="Service select">
-    <option selected>Select a service you want to book</option>
+  <select class="form-select" aria-label="Service select" id = "serviceInput">
+    <option value="blank" selected>Select a service you want to book</option>
     <option value="Telerehab">Telerehab</option>
     <option value="Acupuncture">Acupuncture</option>
     <option value="Massage Therapy">Massage Therapy</option>
@@ -175,9 +175,9 @@ Many websites will use what is called CSS grid layouts, where you will have a he
   </div>
 
   <div class="input-group mb-3">
-  <label class="input-group-text" for="time input">Time</label>
-  <select class="form-select" id="time input">
-    <option selected>Choose a time</option>
+  <label class="input-group-text" for="timeInput">Time</label>
+  <select class="form-select" id="timeInput">
+    <option value="blank" selected>Choose a time</option>
     <option value="1">9:00 AM</option>
     <option value="2">10:00 AM</option>
     <option value="3">1:00 PM</option>
@@ -191,8 +191,8 @@ Many websites will use what is called CSS grid layouts, where you will have a he
   Please enter your contact information
   <div class="input-group mb-3">
     <span class="input-group-text">First and last name</span>
-    <input type="text" aria-label="First name" class="form-control" placeholder="First name" >
-    <input type="text" aria-label="Last name" class="form-control" placeholder="Last name">
+    <input type="text" aria-label="First name" class="form-control" placeholder="First name" id = "nameInput" >
+    <input type="text" aria-label="Last name" class="form-control" placeholder="Last name" id = "nameInput">
   </div>
 
   <div class="input-group mb-3">
@@ -201,7 +201,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 
   <h2 style="font-family:fantasy; color:#04AA6D" id = "Booking"><img src="images/icons8-online-payment-64.png" alt="logo" style="width:30px;"> Payment</h2>
   <br>
-  <img src="images/icons8-card-payment-256.png" alt="logo" style="width:30px;"> Credit Card: <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged." placeholder="xxxx xxxx xxxx xxxx">
+  <img src="images/icons8-card-payment-256.png" alt="logo" style="width:30px;"> Credit Card: <input type="text" class="form-control" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged." placeholder="xxxx xxxx xxxx xxxx">
   <br>
   <br>
   <button type="button" class="btn btn-primary" id = "submitButton">
