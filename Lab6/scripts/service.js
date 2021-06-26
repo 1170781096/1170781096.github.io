@@ -183,7 +183,7 @@ $(document).ready(function(){
     });
 
     if(notComplete == 1){
-      alert("Please fill in all fields, select service and time")
+      alert("Please fill in all fields, select service, date and time")
     } else {alert("You have successfully made an appointment with the expert, date and time you selected, thank you!")}
 });
 
